@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<!--
+This page makes a Mad Lib story. For an example of a similar page, go here:
+
+http://www.redkid.net/madlibs/
+-->
+
+<html>
+<head>
+<title>My MadLib</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+<h1>My MadLib</h1>
+
+<div class="data">
+
+    <p class="instructions">Enter a value into each field. Then press 'Make Story' to read the story you made.</p>
+
+    <form>
+    Toss ya boy a name <input type="text" id='name'> <br>
+    How old is the homie <input type="number" id='age'> <br>
+    Give the homie a city <input type="text" id='place'> <br>
+    Throw a number in there for me dawg <input type="number" id='shot'> <br>
+    Give an action for the kid <input type="text" id='action'> <br>
+    Is the thug a he or she? <input type="text" id='gender'> <br>
+    Give ya boy a place <input type="text" id='place'> <br>
+    Name a body part? <input type="text" id='part'> <br>
+
+
+    <input type="button" onclick="greet()" value="Submit">
+    </form>
+
+
+    <!--
+    Request that the user type in at least 15 words in the form below. Ask for the
+    words by part of speach (noun, verb, adjective, adverb, proper noun, etc.) You
+    can also ask for things like places. Use field ids like noun1, noun2, verb1, etc.
+
+    Then make a button with the text "Make Story". The Make Story button should call
+    your makeStory() function which gets all of the form data and then builds and
+    displays your finished story.
+    -->
+
+    <form>
+
+    </form>
+
+</div>
+
+<div class="story">
+    <h2 id="title"></h2>
+
+    <p id="one"><script>
+    function greet() {
+        // get form values
+        var name = document.getElementById('name').value;
+        var age = document.getElementById('age').value;
+        var place = document.getElementById('place').value;
+        var shot = document.getElementById('shot').value;
+        var action = document.getElementById('action').value;
+        var gender= document.getElementById('gender').value;
+        var place= document.getElementById('place').value;
+        var part= document.getElementById('part').value;
+
+
+var title = "a day in the hood.";
+        // build message
+        message = "One day, " + name + ", " + age + " years old, was walking in the peacful broken streets of " + place +
+                  ". And thats where " + gender +  " messed up. Out the blue, " + name + " heard " + shot + " gunshots. But " + name + " wasnt going out like a punk, so " + gender + " did what any other thug would do in the hood, and " + action +  " until he was back home. but thats not all, " + gender + " took a deep breath and sat down to think for a minute. should " + gender + "call " + place + "? After" + gender +  " called " + gender +  "was calmed down and realized that " + gender + " was bleeding on their " + part + ".";
+
+        // display message
+        document.getElementById('title').innerHTML = title;
+        document.getElementById('greeting').innerHTML = message;
+    }
+    </script></p>
+    <p id="two"></p>
+    <p id="three"></p>
+    <p id="greeting"></p>
+
+</div>
+<!-- don't forget to link to the story_maker.js file here. -->
+
+
+</body>
+</html>
